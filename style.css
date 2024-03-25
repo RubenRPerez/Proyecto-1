@@ -1,0 +1,26 @@
+body {
+    background-color: gray;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container {
+    background-color: lightblue;
+    width: 1000px;
+    height: 800px;
+    position: relative;
+}
+
+#player {
+    background-color: brown;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
