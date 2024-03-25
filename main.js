@@ -1,20 +1,13 @@
-const board = document.getElementById("container")
+const board = document.getElementById('container')
+const player = new Player(100, 400, board)
 
-function Player(x, y, board) {
-    this.x = x
-    this.y = y
-    this.width = 100
-    this.height = 100
-    this.sprite = document.createElement("div")
-    
-    this.insertPlayer = function() {
-        this.sprite.setAttribute("id", "player")
-        this.sprite.style.left = this.x + "px"
-        this.sprite.style.top = this.y + "px"
-        board.appendChild(this.sprite)
-    }
+function startGame() {
+    player.drawPlayer()
+    playerTimeId = setInterval(playerMove, 20)
 }
 
-const player = new Player(250, 250, board)
+function playerMove() {
+    player.move()
+}
 
-player.insertPlayer()
+startGame()
