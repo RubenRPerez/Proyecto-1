@@ -6,7 +6,7 @@ function Player (x, y, board) {
     this.height = 50
     this.velocityX = 0
     this.velocityY = 1
-    this.gravity = 0.85
+    this.gravity = 0.05
     this.sprite = document.createElement('div')
 
     this.drawPlayer = function() {
@@ -40,6 +40,15 @@ function Player (x, y, board) {
             self.x = 0
             self.sprite.style.left =self.x + "px"
         }
-    
+
+        if (this.x < platform3.x + platform3.width &&
+        this.x + this.width > platform3.x &&
+        this.y < platform3.y + platform3.height &&
+        this.y + this.height > platform3.y) {
+            this.y = platform3.y -50 
+            this.velocityY = 0
+        } 
     }
 }
+
+

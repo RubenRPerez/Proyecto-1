@@ -23,3 +23,10 @@ body {
     position: absolute; 
     background-color: brown;
 }
+
+.platform {
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    background-color: darkorange;
+}
