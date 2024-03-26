@@ -13,8 +13,20 @@ body {
 #container {
     width: 1024px;
     height: 576px;
-    background-color: lightblue;
     position: relative;
+    background-image: url('./assets/pixil-frame-0.png');
+    background-repeat: repeat;
+    background-size: auto;
+}
+
+#container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
 }
 
 #player {
@@ -28,5 +40,9 @@ body {
     width: 200px;
     height: 50px;
     position: absolute;
-    background-color: darkorange;
+    background-image: url(./assets/viga.png);
+    background-repeat: repeat-x;
+    background-size: contain;
 }
+
+
