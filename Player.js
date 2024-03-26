@@ -50,6 +50,16 @@ function Player (x, y, board) {
                 this.x + this.width > currentPlatform.x &&
                 this.y < currentPlatform.y + currentPlatform.height &&
                 this.y + this.height > currentPlatform.y) {
+                   
+                    if (this.y + this.height > platformArr[8].y && this.y + this.height < platformArr[8].y + Math.abs(this.velocityY)) {
+                        
+                        if (document.getElementById("timer").innerHTML > 0){
+                               
+                                document.getElementById("timer").innerHTML = "WINNER"
+                                clearInterval(countdownInterval)
+                        }
+                        
+                        }
 
                     // Verifica si el personaje está tocando el vértice superior de la plataforma
                     if (this.y + this.height > currentPlatform.y && this.y + this.height < currentPlatform.y + Math.abs(this.velocityY)) {
@@ -82,6 +92,7 @@ function Player (x, y, board) {
                     }
                     
             }
+            
 
         }     
         

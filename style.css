@@ -1,4 +1,6 @@
 body {
+    position: relative;
+
     background-color: grey;
     width: 100vw;
     height: 100vh;
@@ -11,10 +13,14 @@ body {
 }
 
 #container {
+    position: absolute;
     width: 1024px;
     height: 576px;
     background-color: lightblue;
-    position: relative;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    
 }
 
 #player {
@@ -30,3 +36,12 @@ body {
     position: absolute;
     background-color: darkorange;
 }
+
+.countdown {
+    position: absolute; 
+    top: 50px; 
+  }
+  
+  #timer {
+    font-size: 3rem;
+  }
