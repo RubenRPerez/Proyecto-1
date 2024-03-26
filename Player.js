@@ -6,7 +6,7 @@ function Player (x, y, board) {
     this.height = 50
     this.velocityX = 0
     this.velocityY = 1
-    this.gravity = 0.70
+    this.gravity = 0.90
     this.sprite = document.createElement('div')
 
     this.drawPlayer = function() {

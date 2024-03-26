@@ -11,12 +11,12 @@ window.addEventListener('keydown', function(event) {
         case 'ArrowLeft':
         case 'a':
             // move player to the left
-            player.velocityX = -3
+            player.velocityX = -5
             break
         case 'ArrowRight':
         case 'd':
             //move player to the right
-            player.velocityX = 3
+            player.velocityX = 5
             break
     }
 })

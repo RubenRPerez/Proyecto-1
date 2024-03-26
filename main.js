@@ -3,10 +3,12 @@ const board = document.getElementById('container')
 
 let platformArr = []
 
-platformArr.push(new Platform(600, 470, 200, 50, board));
-platformArr.push(new Platform(700, 420, 200, 50, board));
-platformArr.push(new Platform(824, 380, 200, 50, board));
-platformArr.push(new Platform(0, 300, 200, 50, board));
+platformArr.push(new Platform(0, 470, 200, 50, board));
+platformArr.push(new Platform(150, 360, 200, 50, board));
+platformArr.push(new Platform(300, 250, 200, 50, board));
+platformArr.push(new Platform(450, 140, 200, 50, board));
+platformArr.push(new Platform(0, 0, 1024, 5, board));
+
 
 const player = new Player(40, 50, board)
 
