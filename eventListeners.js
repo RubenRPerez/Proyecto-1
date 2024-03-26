@@ -6,6 +6,7 @@ window.addEventListener('keydown', function(event) {
             // jump player with gravity
             if(player.velocityY === 0) {
                 player.velocityY = -15
+            
             }
             break
         case 'ArrowLeft':
@@ -19,6 +20,7 @@ window.addEventListener('keydown', function(event) {
             player.velocityX = 5
             break
     }
+    player.gravity = 0.90
 })
 
 window.addEventListener('keyup', function(event) {
@@ -32,4 +34,5 @@ window.addEventListener('keyup', function(event) {
             player.velocityX = 0
             break
     }
-})
+    player.gravity = 0.90
+})    

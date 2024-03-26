@@ -45,18 +45,18 @@ function Player (x, y, board) {
 
         for(let i = 0; i < platformArr.length; i++) {
             const currentPlatform = platformArr[i]
-            //console.log('aqui')
 
             if (this.x < currentPlatform.x + currentPlatform.width &&
                 this.x + this.width > currentPlatform.x &&
                 this.y < currentPlatform.y + currentPlatform.height &&
                 this.y + this.height > currentPlatform.y) {
-                    console.log('aqui')
+
                     // Verifica si el personaje está tocando el vértice superior de la plataforma
                     if (this.y + this.height > currentPlatform.y && this.y + this.height < currentPlatform.y + Math.abs(this.velocityY)) {
                         // Si el personaje está tocando el vértice superior de la plataforma, ajusta su posición y velocidad en consecuencia
                         this.y = currentPlatform.y - this.height;
                         this.velocityY = 0;
+                        this.gravity = 0
                     }
                     // Verifica si el personaje está tocando los lados de la plataforma
                     else {
@@ -64,20 +64,26 @@ function Player (x, y, board) {
                         if (this.x + this.width > currentPlatform.x && this.x < currentPlatform.x) {
                             // Si el personaje está chocando con el lado izquierdo de la plataforma, ajusta su posición en consecuencia
                             this.x = currentPlatform.x - this.width;
+                            this.velocityY = 0
                         }
                         // Verifica si el personaje está chocando con el lado derecho de la plataforma
                         else if (this.x < currentPlatform.x + currentPlatform.width && this.x + this.width > currentPlatform.x + currentPlatform.width) {
                             // Si el personaje está chocando con el lado derecho de la plataforma, ajusta su posición en consecuencia
                             this.x = currentPlatform.x + currentPlatform.width;
+                            
                         }
                         // Verifica si el personaje está chocando con el lado inferior de la plataforma
                         else if (this.y < currentPlatform.y + currentPlatform.height && this.y > currentPlatform.y) {
                             // Si el personaje está chocando con el lado inferior de la plataforma, ajusta su posición y velocidad en consecuencia
                             this.y = currentPlatform.y + currentPlatform.height;
-                            this.velocityY = 0;
+                            this.velocityY = 0;    
                         }
+                        
                     }
+                    
             }
+
         }     
+        
     }
 }
