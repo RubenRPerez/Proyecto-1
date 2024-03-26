@@ -64,7 +64,7 @@ function Player (x, y, board) {
                         if (this.x + this.width > currentPlatform.x && this.x < currentPlatform.x) {
                             // Si el personaje está chocando con el lado izquierdo de la plataforma, ajusta su posición en consecuencia
                             this.x = currentPlatform.x - this.width;
-                            this.velocityY = 0
+                           
                         }
                         // Verifica si el personaje está chocando con el lado derecho de la plataforma
                         else if (this.x < currentPlatform.x + currentPlatform.width && this.x + this.width > currentPlatform.x + currentPlatform.width) {
