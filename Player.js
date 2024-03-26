@@ -22,7 +22,6 @@ function Player (x, y, board) {
 
         self.y += self.velocityY
         let sideBottom = self.y
-
         
         
         // posicion + velocidad porque si no se queda el personaje despegazo del limite               

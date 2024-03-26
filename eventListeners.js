@@ -13,11 +13,13 @@ window.addEventListener('keydown', function(event) {
         case 'a':
             // move player to the left
             player.velocityX = -5
+            player.sprite.style.backgroundImage = 'url("./assets/robot-izquierda.png")'
             break
         case 'ArrowRight':
         case 'd':
             //move player to the right
             player.velocityX = 5
+            player.sprite.style.backgroundImage = 'url("./assets/robot-derecha.png")'
             break
     }
     player.gravity = 0.90
